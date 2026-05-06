@@ -1,7 +1,5 @@
 package br.com.fiapride.main;
 
-import java.util.ArrayList;
-import java.util.List;
 import br.com.fiapride.model.*;
 
 public class TesteMeuObjeto {
@@ -13,13 +11,16 @@ public class TesteMeuObjeto {
         PS5Digital ps5Digital = new PS5Digital("Branco", controle, 1000);
         PS5MidiaFisica ps5Midia = new PS5MidiaFisica("Preto", controle, true);
 
-        List<Playstation_5> lista = new ArrayList<>();
+        Conectavel[] dispositivos = new Conectavel[3];
 
-        lista.add(ps5Digital);
-        lista.add(ps5Midia);
+        dispositivos[0] = ps5Digital;
+        dispositivos[1] = ps5Midia;
+        dispositivos[2] = controle;
 
-        for (Playstation_5 ps5 : lista) {
-            System.out.println(ps5.calcularConsumoEnergia());
+        for (Conectavel d : dispositivos) {
+            d.conectarInternet();
+            d.desconectarInternet();
+            System.out.println("-----");
         }
     }
 }

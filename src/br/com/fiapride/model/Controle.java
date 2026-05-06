@@ -1,6 +1,6 @@
 package br.com.fiapride.model;
 
-public class Controle {
+public class Controle implements Conectavel {
 
     private int nivelBateria;
     private String cor;
@@ -28,5 +28,13 @@ public class Controle {
         if (cor != null && !cor.isEmpty()) {
             this.cor = cor;
         }
+    }
+
+    public void conectarInternet() {
+        System.out.println("Controle conectado via Bluetooth");
+    }
+
+    public void desconectarInternet() {
+        System.out.println("Controle desconectado");
     }
 }

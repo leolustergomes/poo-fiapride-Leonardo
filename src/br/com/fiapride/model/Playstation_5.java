@@ -1,6 +1,6 @@
 package br.com.fiapride.model;
 
-public abstract class Playstation_5 {
+public abstract class Playstation_5 implements Conectavel {
 
     private String cor;
     private boolean ligado;
@@ -50,6 +50,14 @@ public abstract class Playstation_5 {
 
     public void setMultiplayer(boolean multiplayer) {
         this.multiplayer = multiplayer;
+    }
+
+    public void conectarInternet() {
+        System.out.println("PS5 conectado à internet");
+    }
+
+    public void desconectarInternet() {
+        System.out.println("PS5 desconectado da internet");
     }
 
     public abstract double calcularConsumoEnergia();
