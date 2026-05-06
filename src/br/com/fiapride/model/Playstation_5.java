@@ -7,7 +7,6 @@ public class Playstation_5 {
     private int nivelBateriaControle; // 0 a 100
     private boolean multiplayer;
 
-    // Método para ligar
     public void ligar() {
         if (ligado) {
             System.out.println("O PS5 já está ligado!");
@@ -17,7 +16,6 @@ public class Playstation_5 {
         }
     }
 
-    // Método para desligar
     public void desligar() {
         if (!ligado) {
             System.out.println("O PS5 já está desligado!");
@@ -27,7 +25,6 @@ public class Playstation_5 {
         }
     }
 
-    // Método para ajustar bateria (com validação)
     public void ajustarBateria(int nivel) {
         if (nivel < 0 || nivel > 100) {
             System.out.println("Bateria inválida! Use valores entre 0 e 100.");
@@ -37,13 +34,11 @@ public class Playstation_5 {
         System.out.println("Bateria ajustada para: " + nivelBateriaControle + "%");
     }
 
-    // Método para ativar/desativar multiplayer
     public void ativarMultiplayer(boolean status) {
         multiplayer = status;
         System.out.println("Multiplayer: " + (multiplayer ? "Ativado" : "Desativado"));
     }
 
-    // Método para exibir status
     public void exibirStatus() {
         System.out.println("Cor: " + cor);
         System.out.println("Ligado: " + ligado);
@@ -52,7 +47,6 @@ public class Playstation_5 {
         System.out.println("----------------------");
     }
 
-    // Setter com validação
     public void setCor(String cor) {
         if (cor == null || cor.isEmpty()) {
             System.out.println("Cor inválida!");
