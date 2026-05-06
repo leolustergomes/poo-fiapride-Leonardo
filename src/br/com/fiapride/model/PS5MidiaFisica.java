@@ -16,4 +16,8 @@ public class PS5MidiaFisica extends Playstation_5 {
     public void setPossuiLeitorDisco(boolean possuiLeitorDisco) {
         this.possuiLeitorDisco = possuiLeitorDisco;
     }
+
+    public double calcularConsumoEnergia() {
+        return 250.0;
+    }
 }

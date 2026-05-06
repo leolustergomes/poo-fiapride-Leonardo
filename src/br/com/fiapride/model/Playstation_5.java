@@ -5,8 +5,7 @@ public class Playstation_5 {
     private String cor;
     private boolean ligado;
     private boolean multiplayer;
-    private Controle controle; 
-
+    private Controle controle;
 
     public Playstation_5(String cor, Controle controle) {
         setCor(cor);
@@ -15,6 +14,35 @@ public class Playstation_5 {
         this.multiplayer = false;
     }
 
+    public void ligar() {
+        if (!ligado) {
+            ligado = true;
+        }
+    }
+
+    public void desligar() {
+        if (ligado) {
+            ligado = false;
+        }
+    }
+
+    public String getCor() {
+        return cor;
+    }
+
+    public void setCor(String cor) {
+        if (cor != null && !cor.isEmpty()) {
+            this.cor = cor;
+        }
+    }
+
+    public boolean isMultiplayer() {
+        return multiplayer;
+    }
+
+    public void setMultiplayer(boolean multiplayer) {
+        this.multiplayer = multiplayer;
+    }
 
     public Controle getControle() {
         return controle;
@@ -24,35 +52,7 @@ public class Playstation_5 {
         this.controle = controle;
     }
 
-
-
-    public void ligar() {
-        if (ligado) {
-            System.out.println("O PS5 já está ligado!");
-        } else {
-            ligado = true;
-            System.out.println("PS5 ligado!");
-        }
-    }
-
-    public void desligar() {
-        if (!ligado) {
-            System.out.println("O PS5 já está desligado!");
-        } else {
-            ligado = false;
-            System.out.println("PS5 desligado!");
-        }
-    }
-
-    public void setCor(String cor) {
-        if (cor == null || cor.isEmpty()) {
-            System.out.println("Erro: cor inválida!");
-        } else {
-            this.cor = cor;
-        }
-    }
-
-    public String getCor() {
-        return cor;
+    public double calcularConsumoEnergia() {
+        return 0.0;
     }
 }

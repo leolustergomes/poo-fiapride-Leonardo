@@ -18,4 +18,8 @@ public class PS5Digital extends Playstation_5 {
             this.armazenamentoDigital = armazenamentoDigital;
         }
     }
+
+    public double calcularConsumoEnergia() {
+        return 200.0;
+    }
 }
