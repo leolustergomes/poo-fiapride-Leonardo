@@ -19,19 +19,7 @@ public class TesteMeuObjeto {
         lista.add(ps5Midia);
 
         for (Playstation_5 ps5 : lista) {
-
-            if (ps5 instanceof PS5Digital) {
-                PS5Digital d = (PS5Digital) ps5;
-                System.out.println("Armazenamento: " + d.getArmazenamentoDigital());
-            }
-
-            if (ps5 instanceof PS5MidiaFisica) {
-                PS5MidiaFisica m = (PS5MidiaFisica) ps5;
-                System.out.println("Leitor de disco: " + m.isPossuiLeitorDisco());
-            }
-
-            System.out.println("Consumo: " + ps5.calcularConsumoEnergia());
-            System.out.println("-------------------");
+            System.out.println(ps5.calcularConsumoEnergia());
         }
     }
 }

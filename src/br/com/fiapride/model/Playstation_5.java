@@ -1,6 +1,6 @@
 package br.com.fiapride.model;
 
-public class Playstation_5 {
+public abstract class Playstation_5 {
 
     private String cor;
     private boolean ligado;
@@ -36,14 +36,6 @@ public class Playstation_5 {
         }
     }
 
-    public boolean isMultiplayer() {
-        return multiplayer;
-    }
-
-    public void setMultiplayer(boolean multiplayer) {
-        this.multiplayer = multiplayer;
-    }
-
     public Controle getControle() {
         return controle;
     }
@@ -52,7 +44,13 @@ public class Playstation_5 {
         this.controle = controle;
     }
 
-    public double calcularConsumoEnergia() {
-        return 0.0;
+    public boolean isMultiplayer() {
+        return multiplayer;
     }
+
+    public void setMultiplayer(boolean multiplayer) {
+        this.multiplayer = multiplayer;
+    }
+
+    public abstract double calcularConsumoEnergia();
 }
