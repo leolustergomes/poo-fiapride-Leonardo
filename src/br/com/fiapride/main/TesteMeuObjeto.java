@@ -1,7 +1,6 @@
 package br.com.fiapride.main;
 
-import br.com.fiapride.model.Playstation_5;
-import br.com.fiapride.model.Controle;
+import br.com.fiapride.model.*;
 
 public class TesteMeuObjeto {
 
@@ -9,11 +8,10 @@ public class TesteMeuObjeto {
 
         Controle controle = new Controle(80, "Branco");
 
-        Playstation_5 ps5 = new Playstation_5("Branco", controle);
+        PS5Digital ps5Digital = new PS5Digital("Branco", controle, 1000);
+        System.out.println(ps5Digital.getArmazenamentoDigital());
 
-        ps5.ligar();
-
-        System.out.println("Bateria do controle: " + ps5.getControle().getNivelBateria());
-        System.out.println("Cor do controle: " + ps5.getControle().getCor());
+        PS5MidiaFisica ps5Midia = new PS5MidiaFisica("Preto", controle, true);
+        System.out.println(ps5Midia.isPossuiLeitorDisco());
     }
 }
