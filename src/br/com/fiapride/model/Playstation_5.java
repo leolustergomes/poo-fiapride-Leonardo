@@ -4,15 +4,27 @@ public class Playstation_5 {
 
     private String cor;
     private boolean ligado;
-    private int nivelBateriaControle; // 0 a 100
     private boolean multiplayer;
+    private Controle controle; 
 
-    public Playstation_5(String cor, int nivelBateriaControle) {
-        this.setCor(cor);
-        this.setNivelBateriaControle(nivelBateriaControle);
-        this.ligado = false; 
-        this.multiplayer = false; 
+
+    public Playstation_5(String cor, Controle controle) {
+        setCor(cor);
+        this.controle = controle;
+        this.ligado = false;
+        this.multiplayer = false;
     }
+
+
+    public Controle getControle() {
+        return controle;
+    }
+
+    public void setControle(Controle controle) {
+        this.controle = controle;
+    }
+
+
 
     public void ligar() {
         if (ligado) {
@@ -32,12 +44,6 @@ public class Playstation_5 {
         }
     }
 
-   
-
-    public String getCor() {
-        return cor;
-    }
-
     public void setCor(String cor) {
         if (cor == null || cor.isEmpty()) {
             System.out.println("Erro: cor inválida!");
@@ -46,31 +52,7 @@ public class Playstation_5 {
         }
     }
 
-    public int getNivelBateriaControle() {
-        return nivelBateriaControle;
-    }
-
-    public void setNivelBateriaControle(int nivelBateriaControle) {
-        if (nivelBateriaControle < 0 || nivelBateriaControle > 100) {
-            System.out.println("Erro: bateria deve estar entre 0 e 100!");
-        } else {
-            this.nivelBateriaControle = nivelBateriaControle;
-        }
-    }
-
-    public boolean isMultiplayer() {
-        return multiplayer;
-    }
-
-    public void setMultiplayer(boolean multiplayer) {
-        this.multiplayer = multiplayer;
-    }
-
-    public void exibirStatus() {
-        System.out.println("Cor: " + cor);
-        System.out.println("Ligado: " + ligado);
-        System.out.println("Bateria: " + nivelBateriaControle + "%");
-        System.out.println("Multiplayer: " + multiplayer);
-        System.out.println("----------------------");
+    public String getCor() {
+        return cor;
     }
 }
